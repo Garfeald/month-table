@@ -125,13 +125,10 @@ const changeTabs = (id) => {
 const timeUtcFunc = () => {
     const date = new Date();
     const hour = date.getUTCHours();
-    let minutes = date.getUTCMinutes();
+    const minutes = date.getUTCMinutes();
+    const seconds = date.getUTCSeconds();
 
-    if(minutes < 10){
-        returnminutes = '0' + minutes
-    }
-
-    if(hour >= 12 && minutes > 0 && hour < 18){
+    if(hour >= 12 && minutes >= 0 && hour < 18 && seconds > 0){
         console.log(`Сейчас ${hour}:${minutes < 10 ? '0' + minutes : minutes} - UTC, это где-то между 12:00 и 18:00`)
     }
     else{
