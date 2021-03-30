@@ -1,7 +1,13 @@
 
+// === validDate === //
+
 const validDate = (date) => {
     return new Date(date).toLocaleDateString();
 }
+
+// === //
+
+// === geatTitleMonth === //
 
 const getTitleMonth = (date) => {
     const monthArray = ['January','February','March','April','May','June','July','August','September','October','November','December']
@@ -10,12 +16,18 @@ const getTitleMonth = (date) => {
     return monthArray[monthItem]
 }
 
+// === //
+
+// === getTitleYear === //
+
 const getTitleYear = (date) => {
     const newDate = new Date(date);
     const year = newDate.getFullYear(newDate);
     
     return `${year}`.slice(-2)
 }
+
+// === ///
 
 // === renderTabsContent === //
 
@@ -56,7 +68,7 @@ const renderTabsContent = () => {
 
             // === Search === //
 
-            let input = document.querySelector('#search');
+            const input = document.querySelector('#search');
 
             input.oninput = function(e) {
                 e.preventDefault();
@@ -65,7 +77,7 @@ const renderTabsContent = () => {
 
                 if (value) {
                     list.forEach(elem => {
-                        if (elem.innerText.search(value) == -1) {
+                        if (elem.innerText.search(value) === -1) {
                             elem.parentNode.classList.add('hide');
                         } else {
                             elem.parentNode.classList.remove('hide');
@@ -111,19 +123,19 @@ const changeTabs = (id) => {
 // == timeUtcFunc == //
 
 const timeUtcFunc = () => {
-    
     const date = new Date();
-
     const hour = date.getUTCHours();
+    let minutes = date.getUTCMinutes();
 
-    const minutes = date.getUTCMinutes();
-
+    if(minutes < 10){
+        returnminutes = '0' + minutes
+    }
 
     if(hour >= 12 && minutes > 0 && hour < 18){
-        console.log(`Сейчас ${hour}:${minutes} - UTC, это где-то между 12:00 и 18:00`)
+        console.log(`Сейчас ${hour}:${minutes < 10 ? '0' + minutes : minutes} - UTC, это где-то между 12:00 и 18:00`)
     }
     else{
-        console.log(`${hour}:${minutes}`)
+        console.log(`${hour}:${minutes < 10 ? '0' + minutes : minutes}`)
     }
 }
 
