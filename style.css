@@ -1,0 +1,115 @@
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* === Табы === */
+
+.tabs{
+}
+
+.tabs-triggers{
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    display: flex;
+    background-color: rgb(241, 247, 255);
+}
+
+.tabs-triggers__item{
+    color: rgb(87, 87, 87);
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.tabs-triggers__item--active{
+    color:rgb(0, 0, 138);
+}
+
+.tabs-triggers__item--active::after {
+    position: absolute;
+    margin-left: 182px;
+    content: "";
+    display: block;
+    width: 110px;
+    padding-top: 17px;
+    border-bottom: 3px solid rgb(0, 0, 138);
+}
+
+.sup{
+    position: absolute;
+    top: 15px;
+}
+
+.table{
+    margin-top: 140px;
+    width: 100%;
+}
+
+.tabs-content{
+    width: 100%;
+}
+
+.tabs-content__item{
+    display: none;
+    padding: 20px;
+}
+
+.tabs-content__item--active{
+    width: 1000px;
+    border-bottom: 1px solid rgb(204, 201, 201);
+    display: block;
+}
+
+.number-td{
+    text-align: left;
+    width: 500px;
+}
+
+.date-td{
+    text-align: right;
+    width: 500px;
+}
+
+.block-search{
+    position: fixed;
+    top: 64px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.search{
+    padding: 10px;
+    width: 80%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.search:focus {
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
