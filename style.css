@@ -7,11 +7,12 @@
 
 body {
     padding: 0;
-    margin: 0;
+    margin: auto;
     font-family: Arial;
 }
 
 .wrapper{
+    width: 90%;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -21,12 +22,14 @@ body {
 /* === Табы === */
 
 .tabs{
+    width: 100%;
 }
 
 .tabs-triggers{
     position: fixed;
     top: 0;
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     display: flex;
     background-color: rgb(241, 247, 255);
 }
@@ -46,7 +49,7 @@ body {
 
 .tabs-triggers__item--active::after {
     position: absolute;
-    margin-left: 182px;
+    margin-left: 18.5%;
     content: "";
     display: block;
     width: 110px;
@@ -74,7 +77,8 @@ body {
 }
 
 .tabs-content__item--active{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     border-bottom: 1px solid rgb(204, 201, 201);
     display: block;
 }
@@ -92,7 +96,8 @@ body {
 .block-search{
     position: fixed;
     top: 64px;
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,10 +111,30 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-.search:focus {
-    outline: none;
-}
-
 .hide {
     display: none;
+}
+
+@media(max-width: 1000px){
+    .tabs-triggers__item--active::after {
+        margin-left: 16%;
+    }
+}
+
+@media(max-width: 750px){
+    .tabs-triggers__item--active::after {
+        margin-left: 14%;
+    }
+}
+
+@media(max-width: 600px){
+    .tabs-triggers__item--active::after {
+        margin-left: 12%;
+    }
+}
+
+@media(max-width: 400px){
+    .tabs-triggers__item--active::after {
+        margin-left: 6%;
+    }
 }

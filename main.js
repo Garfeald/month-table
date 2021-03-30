@@ -29,7 +29,6 @@ const renderTabsContent = () => {
         return numbers.json();
     })
     .then((data) => {
-        console.log(data)
         const dataFilter = data.numbers.filter(item => item.is_visible === true)
         dataFilter.map((data, index) => {
             document.getElementById('tabs-triggers').innerHTML += 
@@ -111,7 +110,9 @@ const changeTabs = (id) => {
 /// === ///
 
 
-const timeFunc = () => {
+// == timeUtcFunc == //
+
+const timeUtcFunc = () => {
     
     const date = new Date();
 
@@ -129,5 +130,7 @@ const timeFunc = () => {
 }
 
 
-timeFunc();
+timeUtcFunc();
+
+/// === ///
 
