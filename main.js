@@ -111,10 +111,23 @@ const changeTabs = (id) => {
 /// === ///
 
 
-// const fetchTest = () => {
-//     fetch(`https://guruservicetests-default-rtdb.firebaseio.com/numbers?auth=${key}`)
-//     .then((res) => res.json())
-//     .then((data) => console.log(data))
-// }
+const timeFunc = () => {
+    
+    const date = new Date();
 
-// fetchTest()
+    const hour = date.getUTCHours();
+
+    const minutes = date.getUTCMinutes();
+
+
+    if(hour >= 12 && minutes > 0 && hour < 18){
+        console.log(`Сейчас ${hour}:${minutes} - UTC, это где-то между 12:00 и 18:00`)
+    }
+    else{
+        console.log(`${hour}:${minutes}`)
+    }
+}
+
+
+timeFunc();
+
