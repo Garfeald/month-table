@@ -1,8 +1,4 @@
 
-const apiKey = 'AIzaSyBMR3anl2HCpln7xyWn_cQTw1pywD_bmGo'
-
-const key = '9skiQ5VMy5VDGO0sv9fHRe0sOwdcYskc79sE1WGK'
-
 const validDate = (date) => {
     return new Date(date).toLocaleDateString();
 }
@@ -46,7 +42,7 @@ const renderTabsContent = () => {
             document.querySelector('.tabs-triggers__item').click()
             document.querySelector('.block-search').innerHTML =
             `
-                <input type="text" class="search" id="search${index + 1}" placeholder="search...">
+                <input type="text" class="search" id="search" placeholder="search...">
             `
             Object.values(dataFilter[index].number_list).map((data) => {
                 document.getElementById('tabs-content').innerHTML +=
@@ -60,7 +56,7 @@ const renderTabsContent = () => {
 
             // === Search === //
 
-            let input = document.querySelector(`#search${index + 1}`);
+            let input = document.querySelector('#search');
 
             input.oninput = function(e) {
                 e.preventDefault();
@@ -71,6 +67,8 @@ const renderTabsContent = () => {
                     list.forEach(elem => {
                         if (elem.innerText.search(value) == -1) {
                             elem.parentNode.classList.add('hide');
+                        } else {
+                            elem.parentNode.classList.remove('hide');
                         }
                     });
                 } else {
@@ -133,4 +131,3 @@ const timeUtcFunc = () => {
 timeUtcFunc();
 
 /// === ///
-
