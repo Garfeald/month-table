@@ -125,6 +125,10 @@ body {
     .tabs-triggers__item--active::after {
         margin-left: 14%;
     }
+
+    .search{
+        width: 100%;
+    }
 }
 
 @media(max-width: 600px){
