@@ -54,7 +54,7 @@ const renderTabsContent = () => {
             document.querySelector('.tabs-triggers__item').click()
             document.querySelector('.block-search').innerHTML =
             `
-                <input type="text" class="search" id="search" placeholder="search...">
+                <input type="search" class="search" id="search" placeholder="search..."><img src="https://i.ibb.co/HtHVwxG/search.png" class="image-search">
             `
             Object.values(dataFilter[index].number_list).map((data) => {
                 document.getElementById('tabs-content').innerHTML +=
@@ -129,10 +129,10 @@ const timeUtcFunc = () => {
     const seconds = date.getUTCSeconds();
 
     if(hour >= 12 && minutes >= 0 && hour < 18 && seconds > 0){
-        console.log(`Сейчас ${hour}:${minutes < 10 ? '0' + minutes : minutes} - UTC, это где-то между 12:00 и 18:00`)
+        console.log(`Сейчас ${hour < 10 ? '0' + hour : hour}:${minutes < 10 ? '0' + minutes : minutes} - UTC, это где-то между 12:00 и 18:00`)
     }
     else{
-        console.log(`${hour}:${minutes < 10 ? '0' + minutes : minutes}`)
+        console.log(`${hour < 10 ? '0' + hour : hour}:${minutes < 10 ? '0' + minutes : minutes}`)
     }
 }
 

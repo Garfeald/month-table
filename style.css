@@ -9,6 +9,7 @@ body {
     padding: 0;
     margin: auto;
     font-family: Arial;
+    overflow-y: scroll
 }
 
 .wrapper{
@@ -106,7 +107,7 @@ body {
 }
 
 .search{
-    padding: 10px;
+    padding: 10px 40px;
     width: 80%;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
@@ -115,6 +116,12 @@ body {
     display: none;
 }
 
+.image-search{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 85%;
+}
 @media(max-width: 1000px){
     .tabs-triggers__item--active::after {
         margin-left: 16%;
@@ -142,3 +149,4 @@ body {
         margin-left: 6%;
     }
 }
+
