@@ -136,17 +136,29 @@ body {
     .search{
         width: 100%;
     }
+
+    .image-search{
+        right: 92%;
+    }
 }
 
 @media(max-width: 600px){
     .tabs-triggers__item--active::after {
         margin-left: 12%;
     }
+
+    .image-search{
+        right: 90%;
+    }
 }
 
 @media(max-width: 400px){
     .tabs-triggers__item--active::after {
         margin-left: 6%;
+    }
+
+    .image-search{
+        right: 85%;
     }
 }
 
