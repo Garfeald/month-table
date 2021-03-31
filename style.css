@@ -96,7 +96,7 @@ body {
 
 .block-search{
     position: fixed;
-    top: 64px;
+    top: 63px;
     width: 90%;
     max-width: 1000px;
     display: flex;
